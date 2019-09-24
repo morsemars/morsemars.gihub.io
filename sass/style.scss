@@ -17,7 +17,8 @@ a {
   color: white;
 }
 
-button {
+button,
+.btn {
   border: 1px solid $accent-color;
   background: none;
   color: $main-color;
@@ -37,14 +38,16 @@ header {
 }
 
 footer {
-  bottom: 0;
   height: 80px;
-  position: absolute;
-  width: 100vw;
+  background: black;
 }
 
 .accent-color {
   color: $accent-color;
+}
+
+.accent-background {
+  background: $accent-color;
 }
 
 .inline-flex {
@@ -60,8 +63,10 @@ button:focus {
   outline: none;
 }
 
-button:hover {
+button:hover,
+.btn:hover {
   background: $accent-color;
+  color: gray;
 }
 
 ul.inline-nav-links {
@@ -70,7 +75,8 @@ ul.inline-nav-links {
 }
 
 div.main-content {
-  height: calc(100vh - 180px);
+  height: calc(100vh - 100px);
+  margin: auto 40px;
 }
 
 section.about-me {
@@ -80,9 +86,7 @@ section.about-me {
 header {
   div.logo {
     margin: auto 40px;
-    font-size: 2em;
     letter-spacing: 4px;
-    font-weight: bold;
   }
   nav.main-nav {
     margin: auto;
@@ -115,7 +119,8 @@ section.about-me {
 }
 
 div.contact-me-buttons {
-  button {
+  button,
+  .btn {
     font-size: 20px;
   }
 }
