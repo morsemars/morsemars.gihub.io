@@ -1,7 +1,9 @@
 @import "./vendors/fontawesome/scss/fontawesome.scss";
 @import "./vendors/fontawesome/scss/brands.scss";
+@import "./vendors/fontawesome/scss/solid.scss";
 
 $background: #042b3e;
+$light-background: #0d3549;
 $accent-color: #57cfa9;
 $main-color: white;
 $light: #fee8af;
@@ -29,7 +31,7 @@ button,
 }
 
 body {
-  background: $background;
+  background: linear-gradient($background, $light-background);
   color: $main-color;
 }
 
@@ -59,6 +61,14 @@ footer {
   width: 50%;
 }
 
+.center {
+  text-align: center;
+}
+
+.btn-round {
+  border-radius: 50%;
+}
+
 button:focus {
   outline: none;
 }
@@ -69,6 +79,20 @@ button:hover,
   color: gray;
 }
 
+a:hover {
+  color: gray;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: $main-color;
+  top: 40px;
+  bottom: 20px;
+  left: 50%;
+}
+
 ul.inline-nav-links {
   list-style-type: none;
   display: flex;
@@ -77,10 +101,25 @@ ul.inline-nav-links {
 div.main-content {
   height: calc(100vh - 100px);
   margin: auto 40px;
+  position: relative;
 }
 
 section.about-me {
   font-size: 24px;
+}
+
+div.floating-btn-container {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  background: $accent-color;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  a {
+    margin: auto;
+  }
 }
 
 header {
@@ -101,9 +140,30 @@ footer {
   }
 }
 
+.timeline-content {
+  div {
+    padding: 40px;
+  }
+  .left {
+    text-align: right;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      right: -10px;
+      top: 50%;
+      background: $light;
+    }
+  }
+}
+
 div.landing-img {
   img {
     max-height: 650px;
+    filter: drop-shadow(1px 2px 4px black) hue-rotate(-5deg) contrast(0.9);
   }
 }
 
