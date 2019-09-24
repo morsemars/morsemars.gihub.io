@@ -4,11 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      http-equiv="refresh"
-      content="0; URL='https://morsemars.github.io/portfolio/'"
+    <title>Morse Codes</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap"
+      rel="stylesheet"
     />
-    <title>Marcelino Madriaga</title>
+    <link rel="stylesheet" href="dist/css/style.min.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="main-nav inline-flex">
+      <div class="logo">Morse <span class="accent-color">Codes</span></div>
+      <nav class="main-nav">
+        <ul class="inline-nav-links">
+          <li class="nav-link"><a href="#about-me">about me</a></li>
+          <li class="nav-link"><a href="#work-history">work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-content inline-flex">
+      <div class="landing-img col-50">
+        <img src="/dist/img/laptop.svg" alt="laptop-background" />
+      </div>
+      <section class="about-me col-50">
+        <p>Hello! My name is</p>
+        <h1>
+          Marcelino <br />
+          Madriaga
+        </h1>
+        <p>
+          A web developer who is curious about new technologies and aims to
+          provide solutions to re-connect people.
+        </p>
+        <div class="contact-me-buttons flex-column">
+          <button id="downloadResumeBtn">Resume</button>
+          <button id="emailMeBtn">E-mail me!</button>
+        </div>
+      </section>
+    </div>
+
+    <footer class="inline-flex">
+      <div class="sns-container">
+        <ul class="inline-nav-links">
+          <li class="nav-link">
+            <a href="https://github.com/morsemars" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li class="nav-link">
+            <a href="https://www.linkedin.com/in/mmadriagajr/" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
