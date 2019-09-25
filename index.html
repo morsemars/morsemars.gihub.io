@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="dist/css/style.min.css" />
   </head>
   <body>
-    <header id="home" class="main-nav inline-flex">
+    <header id="home" class="main-nav flex">
       <div class="logo">
         <h2>Morse <span class="accent-color">Codes</span></h2>
       </div>
@@ -24,7 +24,7 @@
       </nav>
     </header>
 
-    <div id="about-me" class="main-content inline-flex">
+    <div id="about-me" class="main-content flex">
       <div class="landing-img col-50">
         <img src="/dist/img/laptop.svg" alt="laptop-background" />
         <!-- <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by pikisuperstar - www.freepik.com</a> -->
@@ -53,8 +53,38 @@
     <div id="work-history" class="main-content">
       <h2 class="center">Work History</h2>
 
-      <div class="timeline">
-        <section class="timeline-content inline-flex">
+      <table class="timeline">
+        <tr>
+          <td class="timeline-present" colspan="2">
+            <h3 class="title">Freelance Developer</h3>
+            <p class="subtitle"></p>Present</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="timeline-content">
+            <h3 class="title">MonstarLab Pte. Ltd. PH ROHQ</h3>
+            <p class="subtitle"></p>Java Developer II</p>
+          </td>
+          <td>July 2016 – October 2018</td>
+        </tr>
+        <tr>
+          <td class="timeline-content">
+            <h3 class="title">Safeway Philtech Inc.</h3>
+            <p class="subtitle">Programmer Analyst</p>
+          </td>
+          <td>August 2013 – April 2016</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="timeline-start">
+            <h3 class="title">Graduated from the University of the Cordilleras</h3>
+            <p class="subtitle">Bachelor of Science in Computer Science</p>
+            <p class="subtitle">April 2013</p>
+          </td>
+        </tr>
+      </table>
+
+      <!-- <div class="timeline">
+        <section class="timeline-content">
           <div class="left col-50">
             <h3 class="title">MonstarLab Pte. Ltd. PH ROHQ</h3>
             <p class="subtitle">Java Developer II</p>
@@ -64,7 +94,7 @@
           </div>
         </section>
 
-        <section class="timeline-content inline-flex">
+        <section class="timeline-content">
           <div class="left col-50">
             August 2013 – April 2016
           </div>
@@ -73,14 +103,14 @@
             <p class="subtitle">Programmer Analyst</p>
           </div>
         </section>
-      </div>
+      </div> -->
 
       <div class="floating-btn-container">
         <a href="#home"><i class="fas fa-chevron-up"></i></a>
       </div>
     </div>
 
-    <footer class="inline-flex">
+    <footer class="flex">
       <div class="sns-container">
         <ul class="inline-nav-links">
           <li class="nav-link">

@@ -37,6 +37,9 @@ body {
 
 header {
   height: 100px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
 
 footer {
@@ -52,7 +55,7 @@ footer {
   background: $accent-color;
 }
 
-.inline-flex {
+.flex {
   display: flex;
 }
 
@@ -83,23 +86,13 @@ a:hover {
   color: gray;
 }
 
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  background-color: $main-color;
-  top: 40px;
-  bottom: 20px;
-  left: 50%;
-}
-
 ul.inline-nav-links {
   list-style-type: none;
   display: flex;
 }
 
 div.main-content {
-  height: calc(100vh - 100px);
+  height: 100vh;
   margin: auto 40px;
   position: relative;
 }
@@ -122,6 +115,12 @@ div.floating-btn-container {
   }
 }
 
+table.timeline {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
 header {
   div.logo {
     margin: auto 40px;
@@ -140,23 +139,9 @@ footer {
   }
 }
 
-.timeline-content {
-  div {
-    padding: 40px;
-  }
-  .left {
-    text-align: right;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      right: -10px;
-      top: 50%;
-      background: $light;
-    }
+div.main-content {
+  h2 {
+    padding: 40px 0;
   }
 }
 
@@ -185,6 +170,30 @@ div.contact-me-buttons {
   }
 }
 
+table.timeline {
+  td {
+    padding: 20px 40px;
+    vertical-align: top;
+    margin-bottom: 20px;
+  }
+  td.timeline-content:first-child {
+    text-align: right;
+    border-right: 2px solid $main-color;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: $accent-color;
+      border: 3px solid white;
+      right: -11px;
+      top: 20px;
+      border-radius: 50%;
+    }
+  }
+}
+
 section.about-me {
   div.contact-me-buttons {
     margin: 40px 20px 40px 0px;
@@ -209,5 +218,45 @@ div.sns-container {
   }
   li.nav-link:hover a {
     color: $accent-color;
+  }
+}
+
+table.timeline {
+  td.timeline-start,
+  td.timeline-present {
+    text-align: center;
+    border: none;
+  }
+
+  td.timeline-present {
+    padding-bottom: 50px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: calc(50% - 14px);
+      width: 24px;
+      height: 24px;
+      border: 3px solid $main-color;
+      background: $accent-color;
+      border-radius: 50%;
+    }
+  }
+
+  td.timeline-start {
+    padding-top: 50px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: calc(50% - 14px);
+      width: 24px;
+      height: 24px;
+      border: 3px solid $main-color;
+      background: $accent-color;
+      border-radius: 50%;
+    }
   }
 }
