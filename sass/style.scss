@@ -261,3 +261,38 @@ table.timeline {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .landing-img {
+    display: none;
+  }
+
+  .col-50 {
+    width: 100%;
+  }
+
+  section.about-me {
+    p {
+      margin: 5px 0;
+      font-size: 0.8em;
+    }
+
+    h1 {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+  }
+
+  div.contact-me-buttons {
+    button,
+    .btn {
+      font-size: 14px;
+    }
+  }
+
+  table.timeline {
+    td {
+      font-size: 12px;
+    }
+  }
+}
